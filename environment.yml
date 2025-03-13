@@ -4,6 +4,8 @@ dependencies:
 - pip
 - ipython
 - jupyter
+- jupyterlab
+- ipykernel
 - matplotlib
 - scipy
 - sympy

@@ -1,4 +1,5 @@
 /* cheatsheet.cpp
+https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md
 A comprehensive C++ cheat sheet covering basic syntax, control structures,
 functions (including lambdas), STL containers, classes, file I/O, error handling, and more.
 This example is written for modern C++ (C++20 features are demonstrated where applicable).
@@ -35,7 +36,13 @@ array<int, 3> a = {1, 2, 3};
 vector<int> v = {1, 2, 3};
 
 # List: Dynaic size, Ordered, Not Indexed.
+(Linked list -- Nodes and Pointers)
 list<int> l = {1, 2, 3}
+Usually used when: 
+1. Insert/Deleted frequently from middle
+2. Don't need to frequently insert at both ends (faster at push_front)
+3. Don't need random access.
+
 
 # Map: Dynamic size, Ordered, Not Indexed (but access by key).
 map<string, int> ages;
@@ -316,7 +323,7 @@ int main() {
         }
         infile.close();
     }
-    
+
     // --- Error Handling ---
     try {
         // Intentional error: division by zero
@@ -326,7 +333,7 @@ int main() {
             throw runtime_error("Division by zero error!");
         }
         cout << dividend / divisor << endl;
-    } catch (const exception &e) {
+    } catch (const exception &e) { //Jumps here in case try fails
         cerr << "Caught an exception: " << e.what() << endl;
     }
     

@@ -6,11 +6,17 @@
             "description": "Default CMake setup using MinGW and g++",
             "hidden": false,
             "generator": "MinGW Makefiles",
-            "binaryDir": "$build",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
             }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "configurePreset": "default"
         }
     ]
 }
